@@ -47,7 +47,6 @@ class Conta(models.Model):
   saldo = models.FloatField(
     default=0.0,
     verbose_name='Saldo'
-
   )
   agencia = models.CharField(
     max_length=255,
@@ -58,4 +57,9 @@ class Conta(models.Model):
     verbose_name='Nome do Banco',
     default='GrogerBank',
     null=True
+  )
+
+class Login(models.Model):
+  email = models.CharField(
+    max_length=255
   )

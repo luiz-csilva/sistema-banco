@@ -1,0 +1,21 @@
+{{msg}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Crie sua conta</h1>
+    <form method="POST" action="/conta">
+        {% csrf_token %}
+        <input type="email" name="email" placeholder="digite seu email">
+        <input type="number" name="numero_conta" placeholder="digite o numero da sua conta">
+        <input type="number" name="agencia" placeholder="digite o numero da sua agencia">
+        <input type="number" name="saldo" placeholder="digite o seu saldo">
+            <input type="submit" value="Criar">
+    </form>
+</body>
+</html>
